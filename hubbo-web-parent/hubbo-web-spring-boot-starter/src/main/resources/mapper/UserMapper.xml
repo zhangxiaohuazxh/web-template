@@ -3,7 +3,7 @@
 <mapper namespace="cn.hubbo.web.starter.mapper.UserMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="cn.hubbo.model.pojo.User">
+    <resultMap id="BaseResultMap" type="cn.hubbo.web.starter.domain.User">
         <id column="user_id" property="userId" />
         <result column="user_name" property="userName" />
         <result column="phone" property="phone" />

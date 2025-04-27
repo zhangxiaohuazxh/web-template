@@ -3,7 +3,7 @@
 <mapper namespace="cn.hubbo.web.starter.mapper.ButtonPermissionMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="cn.hubbo.model.pojo.ButtonPermission">
+    <resultMap id="BaseResultMap" type="cn.hubbo.web.starter.domain.ButtonPermission">
         <id column="id" property="id" />
         <result column="button_permission_code" property="buttonPermissionCode" />
         <result column="button_name" property="buttonName" />

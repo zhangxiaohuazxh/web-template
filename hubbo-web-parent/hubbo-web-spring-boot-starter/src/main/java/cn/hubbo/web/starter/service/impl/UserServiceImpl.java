@@ -1,6 +1,6 @@
 package cn.hubbo.web.starter.service.impl;
 
-import cn.hubbo.model.pojo.User;
+import cn.hubbo.web.starter.domain.User;
 import cn.hubbo.web.starter.mapper.UserMapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;

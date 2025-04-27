@@ -1,6 +1,6 @@
 package cn.hubbo.web.starter.mapper;
 
-import cn.hubbo.model.pojo.MenuPermission;
+import cn.hubbo.web.starter.domain.MenuPermission;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 

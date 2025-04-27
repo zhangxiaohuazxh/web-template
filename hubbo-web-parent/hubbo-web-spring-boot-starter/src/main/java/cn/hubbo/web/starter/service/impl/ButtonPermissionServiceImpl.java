@@ -1,6 +1,6 @@
 package cn.hubbo.web.starter.service.impl;
 
-import cn.hubbo.model.pojo.ButtonPermission;
+import cn.hubbo.web.starter.domain.ButtonPermission;
 import cn.hubbo.web.starter.mapper.ButtonPermissionMapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
