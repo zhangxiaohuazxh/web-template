@@ -3,8 +3,8 @@
   ~ @formatter:off
   ~ Copyright (c) 张晓华
   ~ @author 张晓华
-  ~ 创建时间: 2025.4.27.10.53
-  ~ 更新时间: 2025/4/16 22:43
+  ~ 创建时间: 2025.4.29.10.19
+  ~ 更新时间: 2025/4/28 23:07
   ~ 限定类名: E:/coding/workspace/java/web-template/hubbo-web-parent/pom.xml
   ~ 适度编码益脑，沉迷编码伤身，合理安排时间，享受快乐生活。
   ~ @formatter:on
@@ -63,9 +63,9 @@
         <jna.version>5.17.0</jna.version>
         <hutool.version>5.8.35</hutool.version>
         <mybatis.version>3.0.4</mybatis.version>
-        <mybatis.plus.version>3.5.9</mybatis.plus.version>
-        <mybatis.plus.code.generator.version>3.5.9</mybatis.plus.code.generator.version>
-        <mybatis.plus.extension.version>3.5.9</mybatis.plus.extension.version>
+        <mybatis.plus.version>3.5.12</mybatis.plus.version>
+        <mybatis.plus.code.generator.version>3.5.12</mybatis.plus.code.generator.version>
+        <mybatis.plus.extension.version>3.5.12</mybatis.plus.extension.version>
         <fastjson.version>2.0.57</fastjson.version>
         <freemarker.version>2.3.34</freemarker.version>
         <mapstruct.version>1.6.3</mapstruct.version>
@@ -137,7 +137,12 @@
             </dependency>
             <dependency>
                 <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+                <version>${mybatis.plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-jsqlparser</artifactId>
                 <version>${mybatis.plus.version}</version>
             </dependency>
             <dependency>
@@ -164,11 +169,6 @@
                 <groupId>org.mapstruct</groupId>
                 <artifactId>mapstruct-processor</artifactId>
                 <version>${mapstruct.processor.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-extension</artifactId>
-                <version>${mybatis.plus.extension.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.xuxueli</groupId>

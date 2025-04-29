@@ -2,8 +2,8 @@
   ~ @formatter:off
   ~ Copyright (c) 张晓华
   ~ @author 张晓华
-  ~ 创建时间: 2025.4.27.10.53
-  ~ 更新时间: 2025/4/16 22:43
+  ~ 创建时间: 2025.4.29.10.19
+  ~ 更新时间: 2025/4/28 23:07
   ~ 限定类名: E:/coding/workspace/java/web-template/hubbo-web-parent/hubbo-web-spring-boot-starter/pom.xml
   ~ 适度编码益脑，沉迷编码伤身，合理安排时间，享受快乐生活。
   ~ @formatter:on
@@ -24,7 +24,6 @@
     <packaging>jar</packaging>
 
     <name>hubbo-web-template-spring-boot-starter</name>
-    <url>http://maven.apache.org</url>
 
     <properties>
         <java.version>17</java.version>
@@ -47,6 +46,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -59,11 +59,11 @@
         </dependency>
         <dependency>
             <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
         </dependency>
         <dependency>
             <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-extension</artifactId>
+            <artifactId>mybatis-plus-jsqlparser</artifactId>
         </dependency>
         <dependency>
             <groupId>com.baomidou</groupId>
