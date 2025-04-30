@@ -42,6 +42,7 @@
         <module>hubbo-web-spring-boot-starter</module>
         <module>hubbo-web-demo</module>
         <module>hubbo-model</module>
+        <module>hubbo-code-generate</module>
     </modules>
 
     <scm>
@@ -64,8 +65,7 @@
         <hutool.version>5.8.35</hutool.version>
         <mybatis.version>3.0.4</mybatis.version>
         <mybatis.plus.version>3.5.12</mybatis.plus.version>
-        <mybatis.plus.code.generator.version>3.5.12</mybatis.plus.code.generator.version>
-        <mybatis.plus.extension.version>3.5.12</mybatis.plus.extension.version>
+        <mybatis.plus.code.generator.version>3.5.11</mybatis.plus.code.generator.version>
         <fastjson.version>2.0.57</fastjson.version>
         <freemarker.version>2.3.34</freemarker.version>
         <mapstruct.version>1.6.3</mapstruct.version>
