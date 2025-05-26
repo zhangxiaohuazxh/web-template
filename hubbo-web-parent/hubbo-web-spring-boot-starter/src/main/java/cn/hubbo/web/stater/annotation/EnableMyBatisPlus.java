@@ -16,9 +16,8 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import org.springframework.context.annotation.Import;
-
 import cn.hubbo.web.stater.platform.configuration.MyBatisPlusAutoConfiguration;
+import org.springframework.context.annotation.Import;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
