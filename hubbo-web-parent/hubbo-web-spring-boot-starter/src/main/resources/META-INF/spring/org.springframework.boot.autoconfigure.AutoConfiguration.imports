@@ -9,4 +9,4 @@
 # @formatter:on
 #
 
-cn.hubbo.web.stater.HubboAutoConfiguration
+cn.hubbo.web.starter.HubboAutoConfiguration

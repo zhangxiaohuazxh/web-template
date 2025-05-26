@@ -9,7 +9,7 @@
  * @formatter:on
  */
 
-package cn.hubbo.web.stater.platform.configuration;
+package cn.hubbo.web.starter.platform.configuration;
 
 import cn.hubbo.commons.annotation.Comment;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;

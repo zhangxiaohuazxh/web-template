@@ -9,7 +9,7 @@
  * @formatter:on
  */
 
-package cn.hubbo.web.stater.annotation;
+package cn.hubbo.web.starter.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -18,7 +18,7 @@ import java.lang.annotation.Target;
 
 import org.springframework.context.annotation.Import;
 
-import cn.hubbo.web.stater.platform.configuration.XxlJobAutoConfiguration;
+import cn.hubbo.web.starter.platform.configuration.XxlJobAutoConfiguration;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)

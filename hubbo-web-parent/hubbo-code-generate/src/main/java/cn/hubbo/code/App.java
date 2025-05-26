@@ -19,9 +19,9 @@ public class App {
 		String parentPackageName = "cn.hubbo.web.starter";
 		String xmlLocation = outputDir.replace("java", "resources");
 		MybatisPlusCodeGenerator.DBProperties dbProperties = MybatisPlusCodeGenerator.DBProperties.builder()
-				.url("***********")
+				.url("jdbc:mysql://dbprovider.ap-northeast-1.clawcloudrun.com:38464/hub?characterEncoding=utf8&serverTimezone=Asia/Shanghai")
 				.username("root")
-				.passwd("*********")
+				.passwd("75stjqvx")
 				.driverClassName(Driver.class.getName())
 				.build();
 		MybatisPlusCodeGenerator.CodeGenerateConfigProperties generateConfigProperties = MybatisPlusCodeGenerator.CodeGenerateConfigProperties.builder()

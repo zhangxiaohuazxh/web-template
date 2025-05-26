@@ -9,7 +9,7 @@
  * @formatter:on
  */
 
-package cn.hubbo.web.stater.platform.components.advice;
+package cn.hubbo.web.starter.platform.components.advice;
 
 import static cn.hubbo.commons.ex.BusinessStatusCode.UNKNOWN_ERROR_CODE;
 import static cn.hubbo.commons.ex.BusinessStatusCode.UNKNOWN_ERROR_MSG;

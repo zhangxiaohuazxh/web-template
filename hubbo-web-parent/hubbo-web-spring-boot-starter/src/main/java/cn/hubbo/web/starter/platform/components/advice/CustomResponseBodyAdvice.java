@@ -9,7 +9,7 @@
  * @formatter:on
  */
 
-package cn.hubbo.web.stater.platform.components.advice;
+package cn.hubbo.web.starter.platform.components.advice;
 
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
