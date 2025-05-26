@@ -9,7 +9,7 @@
  * @formatter:on
  */
 
-package cn.hubbo.web.stater.platform.configuration.properties;
+package cn.hubbo.web.starter.platform.configuration.properties;
 
 import java.util.concurrent.TimeUnit;
 

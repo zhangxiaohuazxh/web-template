@@ -9,10 +9,10 @@
  * @formatter:on
  */
 
-package cn.hubbo.web.stater.platform.configuration;
+package cn.hubbo.web.starter.platform.configuration;
 
 import cn.hubbo.model.vo.AuthenticationParam;
-import cn.hubbo.web.stater.platform.components.AuthenticationContextHolder;
+import cn.hubbo.web.starter.platform.components.AuthenticationContextHolder;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

@@ -9,14 +9,14 @@
  * @formatter:on
  */
 
-package cn.hubbo.web.stater.annotation;
+package cn.hubbo.web.starter.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import cn.hubbo.web.stater.platform.configuration.MyBatisPlusAutoConfiguration;
+import cn.hubbo.web.starter.platform.configuration.MyBatisPlusAutoConfiguration;
 import org.springframework.context.annotation.Import;
 
 @Retention(RetentionPolicy.RUNTIME)

@@ -9,7 +9,7 @@
  * @formatter:on
  */
 
-package cn.hubbo.web.stater;
+package cn.hubbo.web.starter;
 
 import static cn.hubbo.commons.constants.StringConstants.DEFAULT_DATE_FORMAT_PATTERN;
 
@@ -31,7 +31,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
 import cn.hubbo.commons.annotation.Comment;
-import cn.hubbo.web.stater.platform.configuration.properties.ThreadPoolProperties;
+import cn.hubbo.web.starter.platform.configuration.properties.ThreadPoolProperties;
 
 @Comment("自动配置类")
 @ComponentScan

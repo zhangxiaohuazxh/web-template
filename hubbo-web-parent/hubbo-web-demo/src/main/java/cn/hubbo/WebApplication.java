@@ -14,9 +14,9 @@ package cn.hubbo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import cn.hubbo.web.stater.annotation.EnableAuthentication;
-import cn.hubbo.web.stater.annotation.EnableMyBatisPlus;
-import cn.hubbo.web.stater.annotation.EnableXxlJob;
+import cn.hubbo.web.starter.annotation.EnableAuthentication;
+import cn.hubbo.web.starter.annotation.EnableMyBatisPlus;
+import cn.hubbo.web.starter.annotation.EnableXxlJob;
 
 @EnableAuthentication
 @EnableXxlJob

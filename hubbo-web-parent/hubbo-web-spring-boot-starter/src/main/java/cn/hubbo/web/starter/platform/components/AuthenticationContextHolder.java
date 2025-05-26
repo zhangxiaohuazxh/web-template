@@ -9,7 +9,7 @@
  * @formatter:on
  */
 
-package cn.hubbo.web.stater.platform.components;
+package cn.hubbo.web.starter.platform.components;
 
 import cn.hubbo.model.vo.AuthenticationParam;
 

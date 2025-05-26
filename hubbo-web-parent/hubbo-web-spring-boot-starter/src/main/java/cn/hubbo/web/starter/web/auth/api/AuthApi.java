@@ -9,7 +9,7 @@
  * @formatter:on
  */
 
-package cn.hubbo.web.stater.web.auth.api;
+package cn.hubbo.web.starter.web.auth.api;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
