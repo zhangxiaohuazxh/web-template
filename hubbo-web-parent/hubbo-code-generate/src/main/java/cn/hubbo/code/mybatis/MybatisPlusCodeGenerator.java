@@ -1,6 +1,5 @@
 package cn.hubbo.code.mybatis;
 
-import cn.hubbo.commons.utils.FileUtils;
 import com.baomidou.mybatisplus.generator.FastAutoGenerator;
 import com.baomidou.mybatisplus.generator.config.OutputFile;
 import com.baomidou.mybatisplus.generator.config.rules.DateType;
@@ -11,7 +10,6 @@ import lombok.Builder;
 import lombok.Data;
 import org.apache.ibatis.annotations.Mapper;
 
-import java.io.File;
 import java.sql.Types;
 import java.util.Collections;
 import java.util.List;
@@ -35,36 +33,40 @@ public class MybatisPlusCodeGenerator {
 						return DbColumnType.STRING;
 					}
 					return typeRegistry.getColumnType(metaInfo);
-				})).packageConfig(builder -> builder.parent(properties.parentPackageName)
+				})).packageConfig(builder -> builder.parent(properties.getParentPackageName())
 						.moduleName(properties.moduleName)
+						.entity("domain")
+						.mapper("mapper")
+						.service("service")
+						.serviceImpl("service.impl")
+						.controller("api")
+						.xml("mapper.xml")
 						.pathInfo(Collections.singletonMap(OutputFile.xml, properties.xmlLocation))
 				).strategyConfig(
 						builder -> builder.addInclude(properties.tableNames == null ? List.of() : properties.tableNames)
 								.addExclude(properties.ignoreTableNames == null ? List.of() : properties.ignoreTableNames)
 								.addTablePrefix(properties.tableNamePrefix == null ? List.of() : properties.tableNamePrefix)
 								.enableSkipView())
-				.strategyConfig(strategyConfig-> {
-					strategyConfig
-							.addTablePrefix(properties.getTrimTablePrefix() == null ? null:properties.getTrimTablePrefix())
-							.addFieldPrefix(properties.getTrimFieldPrefix() == null? Collections.emptyList(): properties.getTrimFieldPrefix())
-							.enableSkipView()
-							.entityBuilder()
-							.naming(NamingStrategy.underline_to_camel)
-							.columnNaming(NamingStrategy.underline_to_camel)
-							.enableLombok()
-							.enableColumnConstant()
-							.enableSerialAnnotation()
-							.enableChainModel()
-							.mapperBuilder()
-							.enableBaseColumnList()
-							.enableBaseResultMap()
-							.mapperAnnotation(Mapper.class)
-							.serviceBuilder()
-							.disableService()
-							.controllerBuilder()
-							.enableRestStyle()
-							.build();
-				})
+				.strategyConfig(strategyConfig-> strategyConfig
+						.addTablePrefix(properties.getTrimTablePrefix() == null ? null:properties.getTrimTablePrefix())
+						.addFieldPrefix(properties.getTrimFieldPrefix() == null? Collections.emptyList(): properties.getTrimFieldPrefix())
+						.enableSkipView()
+						.entityBuilder()
+						.naming(NamingStrategy.underline_to_camel)
+						.columnNaming(NamingStrategy.underline_to_camel)
+						.enableLombok()
+						.enableColumnConstant()
+						.enableSerialAnnotation()
+						.enableChainModel()
+						.mapperBuilder()
+						.enableBaseColumnList()
+						.enableBaseResultMap()
+						.mapperAnnotation(Mapper.class)
+						.serviceBuilder()
+						.disableService()
+						.controllerBuilder()
+						.enableRestStyle()
+						.build())
 				.templateEngine(new FreemarkerTemplateEngine())
 				.execute();
 		// @formatter:on
@@ -90,7 +92,7 @@ public class MybatisPlusCodeGenerator {
 		/* 作者信息 */
 		private String author;
 		/* 输出目录 */
-		private String outputDir = FileUtils.getModuleParentPath();
+		private String outputDir;
 		/* 父包名 */
 		private String parentPackageName;
 		/* 包名 */
@@ -98,7 +100,7 @@ public class MybatisPlusCodeGenerator {
 		/* 模块名 */
 		private String moduleName;
 		/* MyBatis xml文件路径 */
-		private String xmlLocation = outputDir.concat(String.format("%ssrc\\main\\resources", File.separator));
+		private String xmlLocation;
 		/* 需要进行逆向生成的表名 */
 		private List<String> tableNames;
 		/* 逆向生成忽略的表名 */
