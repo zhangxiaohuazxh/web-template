@@ -20,7 +20,6 @@ public class MybatisPlusCodeGenerator {
 		// @formatter:off
 		FastAutoGenerator.create(dbProperties.url, dbProperties.username, dbProperties.passwd)
 				.globalConfig(builder -> builder.author(properties.author)
-						.enableSpringdoc()
 						.outputDir(properties.outputDir)
 						.dateType(DateType.TIME_PACK)).dataSourceConfig(builder -> builder.typeConvertHandler((globalConfig, typeRegistry, metaInfo) -> {
 					int typeCode = metaInfo.getJdbcType().TYPE_CODE;

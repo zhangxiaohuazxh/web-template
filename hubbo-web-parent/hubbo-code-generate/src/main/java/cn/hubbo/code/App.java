@@ -17,11 +17,11 @@ public class App {
 		String moduleName = "hubbo-web-spring-boot-starter";
 		String outputDir = FileUtils.getModuleParentPath() + File.separator + moduleName + "/src/main/java";
 		String parentPackageName = "cn.hubbo.web.starter";
-		String xmlLocation = outputDir.replace("java", "resources");
+		String xmlLocation = outputDir.substring(0, outputDir.length() - 4).concat("resources/mapper");
 		MybatisPlusCodeGenerator.DBProperties dbProperties = MybatisPlusCodeGenerator.DBProperties.builder()
-				.url("jdbc:mysql://dbprovider.ap-northeast-1.clawcloudrun.com:38464/hub?characterEncoding=utf8&serverTimezone=Asia/Shanghai")
-				.username("root")
-				.passwd("75stjqvx")
+				.url("*****************")
+				.username("*****************")
+				.passwd("*****************")
 				.driverClassName(Driver.class.getName())
 				.build();
 		MybatisPlusCodeGenerator.CodeGenerateConfigProperties generateConfigProperties = MybatisPlusCodeGenerator.CodeGenerateConfigProperties.builder()
