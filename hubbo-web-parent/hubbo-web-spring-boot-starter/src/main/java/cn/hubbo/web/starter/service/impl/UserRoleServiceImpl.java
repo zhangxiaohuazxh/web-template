@@ -1,6 +1,6 @@
 package cn.hubbo.web.starter.service.impl;
 
-import cn.hubbo.web.starter.domain.UserRole;
+import cn.hubbo.model.pojo.UserRole;
 import cn.hubbo.web.starter.mapper.UserRoleMapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;

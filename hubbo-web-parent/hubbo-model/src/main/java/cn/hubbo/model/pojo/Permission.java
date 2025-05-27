@@ -1,4 +1,4 @@
-package cn.hubbo.web.starter.domain;
+package cn.hubbo.model.pojo;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -12,7 +12,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 /**
  * <p>
- * 用户基础信息表
+ * 权限信息表
  * </p>
  *
  * @author 张晓华
@@ -21,38 +21,28 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @ToString
-@TableName("t_user")
 @Accessors(chain = true)
-public class User implements Serializable {
+@TableName("t_permission")
+public class Permission implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 1L;
 
     /**
-     * 用户编号，分布式id
+     * 权限id
      */
-    @TableId("user_id")
-    private Long userId;
+    @TableId("permission_id")
+    private Integer permissionId;
 
     /**
-     * 用户名
+     * 权限字符串，三段式，module.menu.action,module模块，如system，auth，menu可以是一级菜单也可以是二级三级菜单，action即要执行的动作，包括CURD
      */
-    private String userName;
+    private String permissionCode;
 
     /**
-     * 手机号
+     * 权限名称
      */
-    private String phone;
-
-    /**
-     * 用户密码，不要存储明文
-     */
-    private String passwd;
-
-    /**
-     * 头像url地址
-     */
-    private String profileUrl;
+    private String permissionName;
 
     /**
      * 是否启用
@@ -65,7 +55,7 @@ public class User implements Serializable {
     private Boolean deleted;
 
     /**
-     * 创建人，用户自行注册的话值就是自己的id
+     * 创建人
      */
     private Long createBy;
 
@@ -84,25 +74,11 @@ public class User implements Serializable {
      */
     private LocalDateTime updateTime;
 
-    /**
-     * 最近一次的上线时间
-     */
-    private LocalDateTime recentOnlineTime;
+    public static final String PERMISSION_ID = "permission_id";
 
-    /**
-     * 对用户的备注信息
-     */
-    private String description;
+    public static final String PERMISSION_CODE = "permission_code";
 
-    public static final String USER_ID = "user_id";
-
-    public static final String USER_NAME = "user_name";
-
-    public static final String PHONE = "phone";
-
-    public static final String PASSWD = "passwd";
-
-    public static final String PROFILE_URL = "profile_url";
+    public static final String PERMISSION_NAME = "permission_name";
 
     public static final String ENABLED = "enabled";
 
@@ -115,8 +91,4 @@ public class User implements Serializable {
     public static final String UPDATE_BY = "update_by";
 
     public static final String UPDATE_TIME = "update_time";
-
-    public static final String RECENT_ONLINE_TIME = "recent_online_time";
-
-    public static final String DESCRIPTION = "description";
 }

@@ -1,4 +1,4 @@
-package cn.hubbo.web.starter.domain;
+package cn.hubbo.model.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -13,7 +13,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 /**
  * <p>
- * 菜单权限关联表
+ * 角色权限关联信息表
  * </p>
  *
  * @author 张晓华
@@ -23,21 +23,27 @@ import java.time.LocalDateTime;
 @Setter
 @ToString
 @Accessors(chain = true)
-@TableName("t_menu_permission")
-public class MenuPermission implements Serializable {
+@TableName("t_role_permission")
+public class RolePermission implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 1L;
 
     /**
-     * 关系编号
+     * 主键编号
      */
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    private Integer permissionId;
+    /**
+     * 角色id
+     */
+    private Long roleId;
 
-    private Integer menuId;
+    /**
+     * 权限编号
+     */
+    private Integer permissionId;
 
     /**
      * 是否启用
@@ -66,9 +72,9 @@ public class MenuPermission implements Serializable {
 
     public static final String ID = "id";
 
-    public static final String PERMISSION_ID = "permission_id";
+    public static final String ROLE_ID = "role_id";
 
-    public static final String MENU_ID = "menu_id";
+    public static final String PERMISSION_ID = "permission_id";
 
     public static final String ENABLED = "enabled";
 

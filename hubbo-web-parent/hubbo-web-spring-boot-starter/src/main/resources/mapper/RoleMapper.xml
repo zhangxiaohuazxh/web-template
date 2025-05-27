@@ -3,7 +3,7 @@
 <mapper namespace="cn.hubbo.web.starter.mapper.RoleMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="cn.hubbo.web.starter.domain.Role">
+    <resultMap id="BaseResultMap" type="cn.hubbo.model.pojo.Role">
         <id column="role_id" property="roleId" />
         <result column="role_name" property="roleName" />
         <result column="enabled" property="enabled" />

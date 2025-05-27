@@ -1,5 +1,6 @@
-package cn.hubbo.web.starter.domain;
+package cn.hubbo.model.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Getter;
@@ -77,10 +78,11 @@ public class Menu implements Serializable {
     /**
      * 序号，查询结果根据此字段排序
      */
+    @TableField("`order`")
     private Integer order;
 
     /**
-     *  菜单类型，如目录C，菜单M，超链接L 
+     *  菜单类型，如目录C，菜单M，超链接L
      */
     private String menuType;
 
@@ -142,7 +144,7 @@ public class Menu implements Serializable {
 
     public static final String KEEP_ALIVE = "keep_alive";
 
-    public static final String ORDER = "order";
+    public static final String ORDER = "`order`";
 
     public static final String MENU_TYPE = "menu_type";
 

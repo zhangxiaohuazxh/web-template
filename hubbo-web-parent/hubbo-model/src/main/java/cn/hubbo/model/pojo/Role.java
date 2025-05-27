@@ -1,4 +1,4 @@
-package cn.hubbo.web.starter.domain;
+package cn.hubbo.model.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -13,7 +13,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 /**
  * <p>
- * 角色权限关联信息表
+ * 角色基础信息表
  * </p>
  *
  * @author 张晓华
@@ -22,28 +22,23 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @ToString
+@TableName("t_role")
 @Accessors(chain = true)
-@TableName("t_role_permission")
-public class RolePermission implements Serializable {
+public class Role implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 1L;
 
     /**
-     * 主键编号
+     * 分布式id
      */
-    @TableId(value = "id", type = IdType.AUTO)
-    private Integer id;
-
-    /**
-     * 角色id
-     */
+    @TableId(value = "role_id", type = IdType.AUTO)
     private Long roleId;
 
     /**
-     * 权限编号
+     * 角色名称
      */
-    private Integer permissionId;
+    private String roleName;
 
     /**
      * 是否启用
@@ -51,13 +46,15 @@ public class RolePermission implements Serializable {
     private Boolean enabled;
 
     /**
+     * 逻辑删除字段
+     */
+    private Boolean deleted;
+
+    /**
      * 创建人
      */
     private Long createBy;
 
-    /**
-     * 创建时间
-     */
     private LocalDateTime createTime;
 
     /**
@@ -70,13 +67,13 @@ public class RolePermission implements Serializable {
      */
     private LocalDateTime updateTime;
 
-    public static final String ID = "id";
-
     public static final String ROLE_ID = "role_id";
 
-    public static final String PERMISSION_ID = "permission_id";
+    public static final String ROLE_NAME = "role_name";
 
     public static final String ENABLED = "enabled";
+
+    public static final String DELETED = "deleted";
 
     public static final String CREATE_BY = "create_by";
 

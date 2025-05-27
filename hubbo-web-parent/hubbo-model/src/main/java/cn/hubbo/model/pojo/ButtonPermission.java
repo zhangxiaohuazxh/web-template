@@ -1,4 +1,4 @@
-package cn.hubbo.web.starter.domain;
+package cn.hubbo.model.pojo;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Getter;

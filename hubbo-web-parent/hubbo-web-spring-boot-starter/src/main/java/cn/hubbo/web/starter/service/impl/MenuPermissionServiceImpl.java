@@ -1,6 +1,6 @@
 package cn.hubbo.web.starter.service.impl;
 
-import cn.hubbo.web.starter.domain.MenuPermission;
+import cn.hubbo.model.pojo.MenuPermission;
 import cn.hubbo.web.starter.mapper.MenuPermissionMapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;

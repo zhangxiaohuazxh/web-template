@@ -1,4 +1,4 @@
-package cn.hubbo.web.starter.domain;
+package cn.hubbo.model.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -13,7 +13,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 /**
  * <p>
- * 用户角色关联信息表
+ * 菜单权限关联表
  * </p>
  *
  * @author 张晓华
@@ -23,34 +23,26 @@ import java.time.LocalDateTime;
 @Setter
 @ToString
 @Accessors(chain = true)
-@TableName("t_user_role")
-public class UserRole implements Serializable {
+@TableName("t_menu_permission")
+public class MenuPermission implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 关系编号
+     */
     @TableId(value = "id", type = IdType.AUTO)
-    private Long id;
+    private Integer id;
 
-    /**
-     * 用户编号，t_user主键
-     */
-    private Long userId;
+    private Integer permissionId;
 
-    /**
-     * 角色编号，t_role主键
-     */
-    private Long roleId;
+    private Integer menuId;
 
     /**
      * 是否启用
      */
     private Boolean enabled;
-
-    /**
-     * 逻辑删除
-     */
-    private Boolean deleted;
 
     /**
      * 创建人
@@ -72,20 +64,13 @@ public class UserRole implements Serializable {
      */
     private LocalDateTime updateTime;
 
-    /**
-     * 备注描述信息
-     */
-    private String description;
-
     public static final String ID = "id";
 
-    public static final String USER_ID = "user_id";
+    public static final String PERMISSION_ID = "permission_id";
 
-    public static final String ROLE_ID = "role_id";
+    public static final String MENU_ID = "menu_id";
 
     public static final String ENABLED = "enabled";
-
-    public static final String DELETED = "deleted";
 
     public static final String CREATE_BY = "create_by";
 
@@ -94,6 +79,4 @@ public class UserRole implements Serializable {
     public static final String UPDATE_BY = "update_by";
 
     public static final String UPDATE_TIME = "update_time";
-
-    public static final String DESCRIPTION = "description";
 }

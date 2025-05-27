@@ -1,9 +1,11 @@
 package cn.hubbo.web.starter.service.impl;
 
-import cn.hubbo.web.starter.domain.Menu;
+import cn.hubbo.model.pojo.Menu;
 import cn.hubbo.web.starter.mapper.MenuMapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * <p>
@@ -15,5 +17,11 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class MenuServiceImpl extends ServiceImpl<MenuMapper, Menu> {
+
+
+	public List<Menu> queryAllMenus() {
+		return getBaseMapper().selectList(null);
+	}
+
 
 }
