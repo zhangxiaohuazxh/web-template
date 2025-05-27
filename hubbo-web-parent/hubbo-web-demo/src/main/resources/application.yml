@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://dbprovider.ap-northeast-1.clawcloudrun.com:38464/hub?characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 75stjqvx
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      minimum-idle: 3
+      maximum-pool-size: 300
+      connection-init-sql: select count(1)
+      connection-timeout: 3000
+      idle-timeout: 300000
+      validation-timeout: 10000
+      pool-name: dataSource
+      allow-pool-suspension: false
+
+
+server:
+  port: 10086

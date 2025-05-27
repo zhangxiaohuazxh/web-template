@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <trees>
+     <tree path="/hubbo-web-parent/hubbo-web-spring-boot-starter" title="web启动器" extension="" presentableText=""
+           tooltipTitle="" icon="GutterBookmark" textColor="108,89,255"/>
+     <tree path="/hubbo-web-parent/hubbo-web-demo" title="测试demo" extension="" presentableText="" tooltipTitle=""
+           icon="XmlBrowsersChrome" textColor="255,127,0"/>
+     <tree path="/hubbo-web-parent/hubbo-model" title="实体类包" extension="" presentableText="" tooltipTitle=""
+           icon="ToolwindowsToolWindowFavorites" textColor="40,255,170"/>
+     <tree path="/hubbo-web-parent/hubbo-commons" title="公共包" extension="" presentableText="" tooltipTitle=""
+           icon="ToolwindowsToolWindowMessages" textColor="255,47,39"/>
+     <tree path="/hubbo-web-parent/hubbo-code-generate" title="逆向工具" extension="" presentableText="" tooltipTitle=""
+           icon="ProvidersMysql" textColor="162,255,38"/>
+ </trees>
